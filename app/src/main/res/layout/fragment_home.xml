@@ -12,7 +12,7 @@
         android:id="@+id/blank"
         android:layout_width="262dp"
         android:layout_height="138dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/round_frame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.865"
@@ -20,14 +20,29 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/blank3"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="21dp"
+        android:background="@drawable/round_frame"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/blank2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blank" />
+
+    <TextView
         android:id="@+id/blank2"
         android:layout_width="350dp"
-        android:layout_height="259dp"
-        android:layout_marginBottom="100dp"
+        android:layout_height="225dp"
+        android:layout_marginBottom="36dp"
         android:background="@drawable/round_frame"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
@@ -91,7 +106,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="55dp"
         android:text="编号"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
@@ -103,54 +118,14 @@
         android:id="@+id/textRunning"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="400dp"
-        android:background="@drawable/round_frame"
+        android:layout_marginTop="16dp"
         android:text="运行状态"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textTemp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
-        android:text="温度（°C）:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/blank2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/blank2" />
-
-    <TextView
-        android:id="@+id/textPower"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="92dp"
-        android:text="功率（%）:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/blank2"
-        app:layout_constraintTop_toTopOf="@+id/blank2" />
-
-    <TextView
-        android:id="@+id/alarm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="72dp"
-        android:text="报警"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/blank2"
-        app:layout_constraintStart_toStartOf="@+id/blank2" />
 
     <TextView
         android:id="@+id/number"
@@ -167,11 +142,36 @@
         app:layout_constraintTop_toBottomOf="@+id/textNumbering" />
 
     <TextView
+        android:id="@+id/showPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="28dp"
+        android:text="这里显示功率"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/blank2"
+        app:layout_constraintTop_toBottomOf="@+id/showTemp" />
+
+    <TextView
+        android:id="@+id/textTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="72dp"
+        android:text="温度（°C）:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/blank2"
+        app:layout_constraintTop_toTopOf="@+id/blank2" />
+
+    <TextView
         android:id="@+id/showTemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="44dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="28dp"
         android:text="这里显示温度"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
@@ -179,16 +179,43 @@
         app:layout_constraintTop_toTopOf="@+id/blank2" />
 
     <TextView
-        android:id="@+id/showPower"
+        android:id="@+id/textPower"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="41dp"
-        android:layout_marginEnd="44dp"
-        android:text="这里显示功率"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:text="功率（%）:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/blank2"
-        app:layout_constraintTop_toBottomOf="@+id/showTemp" />
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/blank2"
+        app:layout_constraintTop_toBottomOf="@+id/textTemp" />
+
+    <TextView
+        android:id="@+id/alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="20dp"
+        android:text="报 警"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/blank2"
+        app:layout_constraintStart_toStartOf="@+id/blank2"
+        app:layout_constraintTop_toBottomOf="@+id/textPower"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="27dp"
+        android:src="@drawable/green_circle"
+        app:layout_constraintStart_toEndOf="@+id/alarm"
+        app:layout_constraintTop_toBottomOf="@+id/showPower" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -199,16 +226,6 @@
         android:src="@drawable/gray_circle"
         app:layout_constraintStart_toEndOf="@+id/textCommunication"
         app:layout_constraintTop_toTopOf="@+id/blank" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="152dp"
-        android:layout_marginBottom="68dp"
-        android:src="@drawable/green_circle"
-        app:layout_constraintBottom_toBottomOf="@+id/blank2"
-        app:layout_constraintStart_toEndOf="@+id/alarm" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
