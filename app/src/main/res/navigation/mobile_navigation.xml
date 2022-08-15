@@ -26,7 +26,7 @@
     <fragment
         android:id="@+id/nav_xitong"
         android:name="com.example.sidebar.ui.xitong.XitongFragment"
-        android:label="@string/menu_xitong"
+        android:label="@string/menu_systemSet"
         tools:layout="@layout/fragment_xitong" />
 
     <fragment

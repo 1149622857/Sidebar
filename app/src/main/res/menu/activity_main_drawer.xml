@@ -16,7 +16,7 @@
             android:title="@string/menu_hanjie" />
         <item
             android:id="@+id/nav_xitong"
-            android:title="@string/menu_xitong" />
+            android:title="@string/menu_systemSet" />
         <item
             android:id="@+id/nav_shoudong"
             android:title="@string/menu_shoudong" />

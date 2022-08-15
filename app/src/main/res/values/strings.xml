@@ -9,7 +9,7 @@
     <string name="menu_home">首页</string>
     <string name="menu_wenkongyi">温控仪相关功能</string>
     <string name="menu_hanjie">焊接参数设置</string>
-    <string name="menu_xitong">系统参数设置</string>
+    <string name="menu_systemSet">系统参数设置</string>
     <string name="menu_shoudong">手动控制参数设置</string>
     <string name="menu_songsi">送丝参数设置</string>
     <string name="menu_guhua">固化参数</string>

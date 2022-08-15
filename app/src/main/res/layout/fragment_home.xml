@@ -5,85 +5,85 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#8B20E4FD"
-    tools:context=".ui.home.HomeFragment"
-    tools:visibility="visible">
+    tools:context=".ui.home.HomeFragment">
 
 
     <TextView
         android:id="@+id/blank"
         android:layout_width="262dp"
         android:layout_height="138dp"
-        android:layout_marginTop="68dp"
-        android:background="@drawable/roundframe"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/round_frame"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintHorizontal_bias="0.865"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/blank2"
-        android:layout_width="396dp"
+        android:layout_width="350dp"
         android:layout_height="259dp"
-        android:layout_marginTop="52dp"
-        android:background="@drawable/roundframe"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/round_frame"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textRunning" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
         android:id="@+id/Serial"
         android:layout_width="86dp"
         android:layout_height="48dp"
-        android:layout_marginTop="144dp"
-        android:layout_marginEnd="116dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginBottom="14dp"
         android:background="@color/white"
         android:entries="@array/data"
         android:spinnerMode="dropdown"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/blank"
+        app:layout_constraintStart_toEndOf="@+id/textSerial" />
 
     <Button
         android:id="@+id/closeSerial"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
-        android:layout_marginEnd="12dp"
+        android:layout_width="88dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/round_frame"
+        android:backgroundTint="#02B0FF"
         android:text="关闭串口"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/blank"
+        app:layout_constraintEnd_toEndOf="@+id/blank" />
 
     <TextView
         android:id="@+id/textSerial"
         android:layout_width="46dp"
         android:layout_height="43dp"
-        android:layout_marginTop="144dp"
-        android:layout_marginEnd="11dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="19dp"
         android:gravity="center"
         android:text="串口:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/Serial"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/blank"
+        app:layout_constraintStart_toStartOf="@+id/blank" />
 
     <TextView
         android:id="@+id/textCommunication"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="152dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="20dp"
         android:text="通迅口"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         android:textStyle="bold"
         android:visibility="visible"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/blank"
+        app:layout_constraintTop_toTopOf="@+id/blank"
         tools:visibility="visible" />
 
     <TextView
@@ -91,11 +91,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="88dp"
         android:text="编号"
-        android:textStyle="bold"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -103,15 +103,14 @@
         android:id="@+id/textRunning"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="163dp"
-        android:layout_marginBottom="428dp"
-        android:background="@drawable/roundframe"
-        android:textStyle="bold"
-        android:gravity="center_horizontal"
+        android:layout_marginBottom="400dp"
+        android:background="@drawable/round_frame"
         android:text="运行状态"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -119,38 +118,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginBottom="308dp"
+        android:layout_marginTop="24dp"
         android:text="温度（°C）:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/blank2" />
+        app:layout_constraintStart_toStartOf="@+id/blank2"
+        app:layout_constraintTop_toTopOf="@+id/blank2" />
 
     <TextView
         android:id="@+id/textPower"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginBottom="240dp"
+        android:layout_marginTop="92dp"
         android:text="功率（%）:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/blank2" />
+        app:layout_constraintStart_toStartOf="@+id/blank2"
+        app:layout_constraintTop_toTopOf="@+id/blank2" />
 
     <TextView
         android:id="@+id/alarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginBottom="172dp"
+        android:layout_marginBottom="72dp"
         android:text="报警"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textStyle="bold"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/blank2"
         app:layout_constraintStart_toStartOf="@+id/blank2" />
 
     <TextView
@@ -159,7 +158,7 @@
         android:layout_height="33dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="11dp"
-        android:background="@drawable/roundframe"
+        android:background="@drawable/round_frame"
         android:gravity="center"
         android:text="123"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -171,32 +170,32 @@
         android:id="@+id/showTemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="96dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="44dp"
         android:text="这里显示温度"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/blank2"
-        app:layout_constraintStart_toEndOf="@+id/textTemp"
         app:layout_constraintTop_toTopOf="@+id/blank2" />
 
     <TextView
         android:id="@+id/showPower"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="94dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="104dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="44dp"
         android:text="这里显示功率"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textPower"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/blank2"
         app:layout_constraintTop_toBottomOf="@+id/showTemp" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="31dp"
         android:layout_height="30dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/gray_circle"
         app:layout_constraintStart_toEndOf="@+id/textCommunication"
         app:layout_constraintTop_toTopOf="@+id/blank" />
@@ -206,7 +205,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="152dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="68dp"
         android:src="@drawable/green_circle"
         app:layout_constraintBottom_toBottomOf="@+id/blank2"
         app:layout_constraintStart_toEndOf="@+id/alarm" />
