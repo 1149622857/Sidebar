@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.sidebar.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_wenkongyi"
+        android:name="com.example.sidebar.ui.wenkongyi.WenkongyiFragment"
+        android:label="@string/menu_wenkongyi"
+        tools:layout="@layout/fragment_wenkongyi" />
+
+    <fragment
+        android:id="@+id/nav_hanjie"
+        android:name="com.example.sidebar.ui.hanjie.HanjieFragment"
+        android:label="@string/menu_hanjie"
+        tools:layout="@layout/fragment_hanjie" />
+
+    <fragment
+        android:id="@+id/nav_xitong"
+        android:name="com.example.sidebar.ui.xitong.XitongFragment"
+        android:label="@string/menu_xitong"
+        tools:layout="@layout/fragment_xitong" />
+
+    <fragment
+        android:id="@+id/nav_shoudong"
+        android:name="com.example.sidebar.ui.shoudong.ShoudongFragment"
+        android:label="@string/menu_shoudong"
+        tools:layout="@layout/fragment_shoudong" />
+
+    <fragment
+        android:id="@+id/nav_songsi"
+        android:name="com.example.sidebar.ui.songsi.SongsiFragment"
+        android:label="@string/menu_songsi"
+        tools:layout="@layout/fragment_songsi" />
+</navigation>
